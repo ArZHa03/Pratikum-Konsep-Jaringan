@@ -26,47 +26,47 @@ Topologi di atas terdiri dari 1 router, 1 switch, dan 8 pc-client dengan 3 VLAN 
 [![Config-IPVLAN.png](https://i.postimg.cc/J7YRcymm/Config-IPVLAN.png)](https://postimg.cc/py8NPLp1)
 <br>
 Berikut perintah-perintah yang digunakan:<br>
-“Router#conf t”<br>
-<br>
-“Router(config)#int gig0/0/0.10”<br>
-“Router(config-subif)#encapsulation dot1q 10”<br>
-“Router(config-subif)#ip add 192.168.10.1 255.255.255.0”<br>
-<br>
-“Router(config)#int gig0/0/0.20”<br>
-“Router(config-subif)#encapsulation dot1q 20”<br>
-“Router(config-subif)#ip add 192.168.20.1 255.255.255.0”<br>
-<br>
-“Router(config)#int gig0/0/0.30”<br>
-“Router(config-subif)#encapsulation dot1q 30”<br>
-“Router(config-subif)#ip add 192.168.30.1 255.255.255.0”<br>
-<br>
+    “Router#conf t”<br>
+    <br>
+    “Router(config)#int gig0/0/0.10”<br>
+    “Router(config-subif)#encapsulation dot1q 10”<br>
+    “Router(config-subif)#ip add 192.168.10.1 255.255.255.0”<br>
+    <br>
+    “Router(config)#int gig0/0/0.20”<br>
+    “Router(config-subif)#encapsulation dot1q 20”<br>
+    “Router(config-subif)#ip add 192.168.20.1 255.255.255.0”<br>
+    <br>
+    “Router(config)#int gig0/0/0.30”<br>
+    “Router(config-subif)#encapsulation dot1q 30”<br>
+    “Router(config-subif)#ip add 192.168.30.1 255.255.255.0”<br>
+    <br>
 ### Conifguration DHCP At Router With CLI
 [![Config-DHCP.png](https://i.postimg.cc/g28dWNhk/Config-DHCP.png)](https://postimg.cc/pmW3QQkg)
 <br>Perintah-perintah yang digunakan:<br>
-“Router>en”<br>
-“Router#conf t”<br>
-<br>
-“Router(config)#int gig0/0/0.10”<br>
-“Router(config-subif)#ip dhcp pool admin”<br>
-“Router(dhcp-config)#network 192.168.10.0 255.255.255.0”<br>
-“Router(dhcp-config)#default-router 192.168.10.1”<br>
-“Router(dhcp-config)#dns-server 192.168.10.1”<br>
-“Router(dhcp-config)#ip dhcp excluded-address 192.168.10.1”<br>
-<br>
-“Router(config)#int gig0/0/0.20”<br>
-“Router(config-subif)#ip dhcp pool dev”<br>
-“Router(dhcp-config)#network 192.168.20.0 255.255.255.0”<br>
-“Router(dhcp-config)#default-router 192.168.20.1”<br>
-“Router(dhcp-config)#dns-server 192.168.20.1”<br>
-“Router(dhcp-config)#ip dhcp excluded-address 192.168.20.1”<br>
-<br>
-“Router(config)#int gig0/0/0.30”<br>
-“Router(config-subif)#ip dhcp pool manager”<br>
-“Router(dhcp-config)#network 192.168.30.0 255.255.255.0”<br>
-“Router(dhcp-config)#default-router 192.168.30.1”<br>
-“Router(dhcp-config)#dns-server 192.168.30.1”<br>
-“Router(dhcp-config)#ip dhcp excluded-address 192.168.30.1”<br>
-<br>
+    “Router>en”<br>
+    “Router#conf t”<br>
+    <br>
+    “Router(config)#int gig0/0/0.10”<br>
+    “Router(config-subif)#ip dhcp pool admin”<br>
+    “Router(dhcp-config)#network 192.168.10.0 255.255.255.0”<br>
+    “Router(dhcp-config)#default-router 192.168.10.1”<br>
+    “Router(dhcp-config)#dns-server 192.168.10.1”<br>
+    “Router(dhcp-config)#ip dhcp excluded-address 192.168.10.1”<br>
+    <br>
+    “Router(config)#int gig0/0/0.20”<br>
+    “Router(config-subif)#ip dhcp pool dev”<br>
+    “Router(dhcp-config)#network 192.168.20.0 255.255.255.0”<br>
+    “Router(dhcp-config)#default-router 192.168.20.1”<br>
+    “Router(dhcp-config)#dns-server 192.168.20.1”<br>
+    “Router(dhcp-config)#ip dhcp excluded-address 192.168.20.1”<br>
+    <br>
+    “Router(config)#int gig0/0/0.30”<br>
+    “Router(config-subif)#ip dhcp pool manager”<br>
+    “Router(dhcp-config)#network 192.168.30.0 255.255.255.0”<br>
+    “Router(dhcp-config)#default-router 192.168.30.1”<br>
+    “Router(dhcp-config)#dns-server 192.168.30.1”<br>
+    “Router(dhcp-config)#ip dhcp excluded-address 192.168.30.1”<br>
+    <br>
 ### Configuration The VLAN In Every Port Connected At Every Switch
 [![Config-Port-VLAN.png](https://i.postimg.cc/jjhbW2vp/Config-Port-VLAN.png)](https://postimg.cc/1g4T29kB)
 |  Devices 	|    Interfaces    	|  Mode  	|     VLAN     	|
